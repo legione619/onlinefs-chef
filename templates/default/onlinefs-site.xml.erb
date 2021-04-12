@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<onlinefs>
+  <rondb>
+    <connectionString><%= @mgm_fqdn %>:<%= node['ndb']['mgmd']['port'] %></connectionString>
+  </rondb>
+
+  <kafka>
+    <bootstrapServers><%= @kafka_fqdn %>:<%= node['kkafka']['broker']['port'] %></bootstrapServers>
+    <trustStoreLocation>/certs/onlinefs__tstore.jks</trustStoreLocation>
+    <keyStoreLocation>/certs/onlinefs__kstore.jks</keyStoreLocation>
+    <keyLocation>/certs/onlinefs__passwd</keyLocation>
+  </kafka>
+
+  <hopsworks>
+    <tokenLocation>/onlinefs/etc/token</tokenLocation>
+  </hopsworks>
+
+</onlinefs>
+

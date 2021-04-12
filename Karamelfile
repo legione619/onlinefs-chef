@@ -1,0 +1,6 @@
+dependencies:
+  - recipe: onlinefs::default
+    global:
+      - kkafka::default
+      - hopsworks::default
+      - consul::slave
